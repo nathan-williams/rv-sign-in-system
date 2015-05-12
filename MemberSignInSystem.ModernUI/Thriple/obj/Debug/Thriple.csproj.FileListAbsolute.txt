@@ -1,0 +1,20 @@
+C:\Users\Nathan\Desktop\Thriple\Thriple\bin\Debug\Thriple.dll
+C:\Users\Nathan\Desktop\Thriple\Thriple\bin\Debug\Thriple.pdb
+C:\Users\Nathan\Desktop\Thriple\Thriple\obj\Debug\Thriple.csprojResolveAssemblyReference.cache
+C:\Users\Nathan\Desktop\Thriple\Thriple\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Nathan\Desktop\Thriple\Thriple\obj\Debug\Thriple_MarkupCompile.cache
+C:\Users\Nathan\Desktop\Thriple\Thriple\obj\Debug\Thriple_MarkupCompile.lref
+C:\Users\Nathan\Desktop\Thriple\Thriple\obj\Debug\Themes\Generic.baml
+C:\Users\Nathan\Desktop\Thriple\Thriple\obj\Debug\Thriple.g.resources
+C:\Users\Nathan\Desktop\Thriple\Thriple\obj\Debug\Thriple.dll
+C:\Users\Nathan\Desktop\Thriple\Thriple\obj\Debug\Thriple.pdb
+C:\Users\Nathan\Documents\Visual Studio 2013\Projects\MemberSignInSystem.ModernUI\Thriple\bin\Debug\Thriple.dll
+C:\Users\Nathan\Documents\Visual Studio 2013\Projects\MemberSignInSystem.ModernUI\Thriple\bin\Debug\Thriple.pdb
+C:\Users\Nathan\Documents\Visual Studio 2013\Projects\MemberSignInSystem.ModernUI\Thriple\obj\Debug\Thriple.csprojResolveAssemblyReference.cache
+C:\Users\Nathan\Documents\Visual Studio 2013\Projects\MemberSignInSystem.ModernUI\Thriple\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Nathan\Documents\Visual Studio 2013\Projects\MemberSignInSystem.ModernUI\Thriple\obj\Debug\Thriple_MarkupCompile.cache
+C:\Users\Nathan\Documents\Visual Studio 2013\Projects\MemberSignInSystem.ModernUI\Thriple\obj\Debug\Thriple_MarkupCompile.lref
+C:\Users\Nathan\Documents\Visual Studio 2013\Projects\MemberSignInSystem.ModernUI\Thriple\obj\Debug\Themes\Generic.baml
+C:\Users\Nathan\Documents\Visual Studio 2013\Projects\MemberSignInSystem.ModernUI\Thriple\obj\Debug\Thriple.g.resources
+C:\Users\Nathan\Documents\Visual Studio 2013\Projects\MemberSignInSystem.ModernUI\Thriple\obj\Debug\Thriple.dll
+C:\Users\Nathan\Documents\Visual Studio 2013\Projects\MemberSignInSystem.ModernUI\Thriple\obj\Debug\Thriple.pdb

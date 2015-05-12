@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2ED5919E-C3B1-4CB4-B967-1AD3AE69B648}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HgCo.WindowsLive.SkyDrive</RootNamespace>
+    <AssemblyName>HgCo.WindowsLive.SkyDriveWebClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>SkyDriveWebClient.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\HgCo.WindowsLive.SkyDriveWebClient.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\HgCo.WindowsLive.SkyDriveWebClient.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.3.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\HtmlAgilityPack\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LogOnFailedException.cs" />
+    <Compile Include="OperationFailedException.cs" />
+    <Compile Include="Support\RegexHelper.cs" />
+    <Compile Include="Support\WebFolderItemHelper.cs" />
+    <Compile Include="UploadValuesProgressChangedEventArgs.cs" />
+    <Compile Include="UploadWebFileProgressChangedEventArgs.cs" />
+    <Compile Include="WebCache.cs" />
+    <Compile Include="WebDriveInfo.cs" />
+    <Compile Include="WebFavoriteInfo.cs" />
+    <Compile Include="WebFolderItemIconInfo.cs" />
+    <Compile Include="WebFolderItemType.cs" />
+    <Compile Include="WebFolderContentType.cs" />
+    <Compile Include="WebFolderViewType.cs" />
+    <Compile Include="WebFolderItemImageInfo.cs" />
+    <Compile Include="WebResponseFormatException.cs" />
+    <Compile Include="WebSession.cs" />
+    <Compile Include="WebFolderInfo.cs" />
+    <Compile Include="WebFileInfo.cs" />
+    <Compile Include="WebFolderItemShareType.cs" />
+    <Compile Include="WebFolderItemInfo.cs" />
+    <Compile Include="SkyDriveWebClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\WebResponseHelper.cs" />
+    <Compile Include="HttpWebClient.cs" />
+    <Compile Include="Support\WebFolderHelper.cs" />
+    <Compile Include="Support\HtmlDocumentHelper.cs" />
+    <Compile Include="Support\MimeTypeHelper.cs" />
+    <Compile Include="Support\UnixDateTimeHelper.cs" />
+    <Compile Include="Support\UriHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SkyDriveWebClient.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

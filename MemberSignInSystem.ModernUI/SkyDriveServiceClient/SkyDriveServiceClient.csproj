@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6605894-91BE-43B2-9765-CB4885E5B09A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HgCo.WindowsLive.SkyDrive</RootNamespace>
+    <AssemblyName>HgCo.WindowsLive.SkyDriveServiceClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>SkyDriveServiceClient.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\HgCo.WindowsLive.SkyDriveServiceClient.xml</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\Release\HgCo.WindowsLive.SkyDriveServiceClient.xml</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.165\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.165\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.165\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime">
+      <HintPath>..\packages\Microsoft.Bcl.1.0.19\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.1.0.19\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Services\SkyDocsService\AccessLevel.cs" />
+    <Compile Include="Services\SkyDocsService\GetItemInfoRequest.cs" />
+    <Compile Include="Services\SkyDocsService\GetItemInfoResponse.cs" />
+    <Compile Include="Services\SkyDocsService\GetProductInfoRequest.cs" />
+    <Compile Include="Services\SkyDocsService\GetProductInfoResponse.cs" />
+    <Compile Include="Services\SkyDocsService\GetWebAccountInfoRequest.cs" />
+    <Compile Include="Services\SkyDocsService\GetWebAccountInfoResponse.cs" />
+    <Compile Include="Services\SkyDocsService\Library.cs" />
+    <Compile Include="Services\SkyDocsService\OperationRequest.cs" />
+    <Compile Include="Services\SkyDocsService\OperationResponse.cs" />
+    <Compile Include="Services\SkyDocsService\ProductInfo.cs" />
+    <Compile Include="Services\SkyDocsService\ServerError.cs" />
+    <Compile Include="Services\SkyDocsService\ServiceInfo.cs" />
+    <Compile Include="Services\SkyDocsService\SharedLibrary.cs" />
+    <Compile Include="Services\SkyDocsService\SharingLevel.cs" />
+    <Compile Include="Services\SkyDocsService\SharingLevelInfo.cs" />
+    <Compile Include="Services\SkyDocsService\SkyDocsServiceClient.cs" />
+    <Compile Include="Services\UsersService\Author.cs" />
+    <Compile Include="Services\UsersService\Content.cs" />
+    <Compile Include="Services\UsersService\CreateRootFolderRequest.cs" />
+    <Compile Include="Services\UsersService\CreateSubFolderItemRequest.cs" />
+    <Compile Include="Services\UsersService\FolderItemResponse.cs" />
+    <Compile Include="Services\UsersService\Link.cs" />
+    <Compile Include="Services\UsersService\ListFolderItemsResponse.cs" />
+    <Compile Include="Services\UsersService\MediaContent.cs" />
+    <Compile Include="Services\UsersService\MediaThumbnail.cs" />
+    <Compile Include="Services\UsersService\SharingLevel.cs" />
+    <Compile Include="Services\UsersService\UsersServiceClient.cs" />
+    <Compile Include="Services\UsersService\UsersServiceSession.cs" />
+    <Compile Include="Support\Net\MimeHelper.cs" />
+    <Compile Include="Support\Net\Soap\SoapWebClient.cs" />
+    <Compile Include="Support\Net\Soap\SoapWebRequest.cs" />
+    <Compile Include="Support\Net\Soap\SoapWebResponse.cs" />
+    <Compile Include="Support\Net\Soap\SoapWebSession.cs" />
+    <Compile Include="Support\Net\WebDav\DepthLevels.cs" />
+    <Compile Include="Support\Net\WebDav\GeneralResponse.cs" />
+    <Compile Include="Support\Net\WebDav\GetItemInfosResponse.cs" />
+    <Compile Include="Support\Net\WebDav\LockEntry.cs" />
+    <Compile Include="Support\Net\WebDav\LockScope.cs" />
+    <Compile Include="Support\Net\WebDav\LockScopeCode.cs" />
+    <Compile Include="Support\Net\WebDav\LockScopeContainer.cs" />
+    <Compile Include="Support\Net\WebDav\LockType.cs" />
+    <Compile Include="Support\Net\WebDav\LockTypeCode.cs" />
+    <Compile Include="Support\Net\WebDav\LockTypeContainer.cs" />
+    <Compile Include="Support\Net\WebDav\Prop.cs" />
+    <Compile Include="Support\Net\WebDav\PropStat.cs" />
+    <Compile Include="Support\Net\WebDav\ResourceType.cs" />
+    <Compile Include="Support\Net\WebDav\ResourceTypeCode.cs" />
+    <Compile Include="Support\Net\WebDav\ResourceTypeContainer.cs" />
+    <Compile Include="Support\Net\WebDav\Response.cs" />
+    <Compile Include="Support\Net\WebDav\SupportedLock.cs" />
+    <Compile Include="Support\Net\WebDav\WebDavMethods.cs" />
+    <Compile Include="Support\Net\WebDav\WebDavWebClient.cs" />
+    <Compile Include="Support\Net\WebUploadProgressChangedEventArgs.cs" />
+    <Compile Include="Support\WebFavoriteHelper.cs" />
+    <Compile Include="Support\WebFileHelper.cs" />
+    <Compile Include="WebDocumentInfo.cs" />
+    <Compile Include="WebFileCategoryType.cs" />
+    <Compile Include="LogOnFailedException.cs" />
+    <Compile Include="SkyDriveServiceClient.Helpers.cs" />
+    <Compile Include="Support\Net\HttpWebClient.cs" />
+    <Compile Include="Support\Net\HttpWebSession.cs" />
+    <Compile Include="Support\Net\PassportClient.cs" />
+    <Compile Include="Support\Net\XmlWebClient.cs" />
+    <Compile Include="Support\Net\XmlWebRequest.cs" />
+    <Compile Include="Support\Net\XmlWebResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OperationFailedException.cs" />
+    <Compile Include="Support\RegexHelper.cs" />
+    <Compile Include="SkyDriveServiceClient.cs" />
+    <Compile Include="SkyDriveSession.cs" />
+    <Compile Include="Support\UnixDateTimeHelper.cs" />
+    <Compile Include="Support\WebFolderHelper.cs" />
+    <Compile Include="Support\WebFolderItemHelper.cs" />
+    <Compile Include="Support\Net\WebResponseHelper.cs" />
+    <Compile Include="WebAccountInfo.cs" />
+    <Compile Include="WebDriveInfo.cs" />
+    <Compile Include="WebFavoriteInfo.cs" />
+    <Compile Include="WebFileInfo.cs" />
+    <Compile Include="WebFolderCategoryType.cs" />
+    <Compile Include="WebFolderInfo.cs" />
+    <Compile Include="WebFolderItemIconInfo.cs" />
+    <Compile Include="WebFolderItemImageInfo.cs" />
+    <Compile Include="WebFolderItemInfo.cs" />
+    <Compile Include="WebFolderItemShareType.cs" />
+    <Compile Include="WebFolderItemType.cs" />
+    <Compile Include="WebPhotoInfo.cs" />
+    <Compile Include="WebUserInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="SkyDriveServiceClient.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WebVideoInfo.cs" />
+    <Compile Include="Services\UsersService\RenameFolderItemRequest.cs" />
+    <Compile Include="Services\UsersService\WlidClient.cs" />
+    <Compile Include="Support\Extensions.cs" />
+    <Compile Include="Support\Net\HttpWebMessagePart.cs" />
+    <Compile Include="Support\Net\WebAuthenticationManager.cs" />
+    <Compile Include="Support\Utf8StringWriter.cs" />
+    <Compile Include="UploadWebFileProgressChangedEventArgs.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" (
+if exist "$(TargetPath)" copy /Y "$(TargetPath)" "$(ProjectDir)..\..\release"
+if exist "$(ProjectDir)$(OutDir)$(TargetName).xml" copy /Y "$(ProjectDir)$(OutDir)$(TargetName).xml" "$(ProjectDir)..\..\release"
+)</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+</Project>
