@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\Nathan\Documents\Visual Studio 2013\Projects\MemberSignInSystem.ModernUI\OpenWeather\obj\Debug\
+C:\Users\Nathan\Documents\GitHub\rv-sign-in-system\MemberSignInSystem.ModernUI\OpenWeather\obj\Debug\
 OpenWeather
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 11574392040
 
 748631953
-16674604265
+16587122300
 WeatherApplet.xaml;
 
 False

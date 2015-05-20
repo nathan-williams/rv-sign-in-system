@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="MemberSignInSystem.ModernUI.Content.FlipImage"
+             x:Name="ThisFlipImage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:thriple="http://thriple.codeplex.com/"
+             mc:Ignorable="d" >
+    
+    <UserControl.Resources>
+        <DataTemplate x:Key="ImageTemplate">
+            <Grid Width="500" Height="500">
+                <Grid.Background>
+                    <ImageBrush ImageSource="{Binding}" Stretch="UniformToFill" AlignmentX="Center" AlignmentY="Center" />
+                </Grid.Background>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid x:Name="ContentGrid">
+        <thriple:ContentControl3D x:Name="ImageContainer" RotationDirection="BottomToTop" AnimationLength="400"
+                                  Content="{Binding ImageSource, ElementName=ThisFlipImage}"
+                                  ContentTemplate="{StaticResource ImageTemplate}"
+                                  BackContentTemplate="{StaticResource ImageTemplate}" >
+            <thriple:ContentControl3D.CameraPrototype>
+                <PerspectiveCamera FieldOfView="79" Position="0, 0, 1.2" LookDirection="0, 0, -1" />
+            </thriple:ContentControl3D.CameraPrototype>
+        </thriple:ContentControl3D>
+    </Grid>
+
+</UserControl>

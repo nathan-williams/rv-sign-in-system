@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-H:\MemberSignInSystem.ModernUI\MemberSignInSystem.ModernUI\obj\Debug\
+C:\Users\Nathan\Documents\GitHub\rv-sign-in-system\MemberSignInSystem.ModernUI\MemberSignInSystem.ModernUI\obj\Debug\
 MemberSignInSystem.ModernUI
 none
 false
 DEBUG;TRACE
-H:\MemberSignInSystem.ModernUI\MemberSignInSystem.ModernUI\App.xaml
+C:\Users\Nathan\Documents\GitHub\rv-sign-in-system\MemberSignInSystem.ModernUI\MemberSignInSystem.ModernUI\App.xaml
 19925128707
 11627521832
-37281868568
-25-645617426
+36-1488052967
+241044256245
 Assets\ModernUI.CustomTheme.xaml;Content\Announcemnts.xaml;Content\Dialogs\LoginHistoryDialog.xaml;Content\Dialogs\MemberDisplayDialog.xaml;Content\FlipImage.xaml;Content\FlipImageGrid.xaml;Content\MarqueeText.xaml;Content\MemberDisplay.xaml;Content\Login.xaml;Content\AdminTools.xaml;Content\Pages\History.xaml;Content\Dialogs\SearchResultDialog.xaml;Content\PoolStatus.xaml;Content\SettingsApplication.xaml;MainWindow.xaml;Content\About.xaml;Content\SettingsAppearance.xaml;Content\Pages\Home.xaml;Content\Pages\Settings.xaml;
 images\153.png
-True
+False
 

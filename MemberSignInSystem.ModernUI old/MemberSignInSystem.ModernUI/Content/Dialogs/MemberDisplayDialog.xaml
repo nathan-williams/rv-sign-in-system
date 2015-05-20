@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="MemberSignInSystem.ModernUI.Content.Dialogs.MemberDisplayDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <BitmapImage x:Key="IndividualDefaultImage" UriSource="/MemberSignInSystem.ModernUI;component/Images/Original.jpg" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid>
+        <StackPanel Orientation="Vertical" Background="Transparent" Margin="5" >
+            <Image Stretch="Uniform" Height="160" Width="160" Source="{Binding PicturePath, TargetNullValue={StaticResource IndividualDefaultImage}}" />
+
+            <Grid Margin="0,2,0,2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.5*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <!--
+                <TextBlock Text="Age" FontWeight="ExtraBold" Margin="0,0,10,0" Grid.Row="0" Grid.Column="0" />
+                <TextBlock Text="{Binding Age}" Grid.Row="0" Grid.Column="1"/>
+
+                <TextBlock Text="Has Passed Swim Test" FontWeight="Bold" Margin="0,0,10,0" Grid.Row="1" Grid.Column="0"
+                           Visibility="{Binding YoungerThan12, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBlock Text="{Binding PassedSwimTest}" Grid.Row="1" Grid.Column="1"
+                           Visibility="{Binding YoungerThan12, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                -->
+                
+                <TextBlock Text="Home Number" FontWeight="ExtraBold" Margin="0,0,10,0" Grid.Row="2" Grid.Column="0"
+                           Visibility="{Binding IsHomeNumNotNullOrEmpty, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBlock Text="{Binding HomeNumber}" Grid.Row="2" Grid.Column="1"
+                           Visibility="{Binding IsHomeNumNotNullOrEmpty, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                <TextBlock Text="Cell Number" FontWeight="ExtraBold" Margin="0,0,10,0" Grid.Row="3" Grid.Column="0"
+                           Visibility="{Binding IsCellNumNotNullOrEmpty, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBlock Text="{Binding CellNumber}" Grid.Row="3" Grid.Column="1"
+                           Visibility="{Binding IsCellNumNotNullOrEmpty, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                <TextBlock Text="Email" FontWeight="ExtraBold" Margin="0,0,10,0" Grid.Row="4" Grid.Column="0"
+                           Visibility="{Binding IsHomeNumNotNullOrEmpty, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBlock Text="{Binding Email}" Grid.Row="4" Grid.Column="1"
+                           Visibility="{Binding IsEmailNotNullOrEmpty, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                <TextBlock Text="Address" FontWeight="ExtraBold" Margin="0,0,10,0" Grid.Row="5" Grid.Column="0"
+                           Visibility="{Binding IsAddressNotNullOrEmpty, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <TextBlock Text="{Binding Address}" Grid.Row="5" Grid.Column="1"
+                           Visibility="{Binding IsAddressNumNotNullOrEmpty, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </Grid>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

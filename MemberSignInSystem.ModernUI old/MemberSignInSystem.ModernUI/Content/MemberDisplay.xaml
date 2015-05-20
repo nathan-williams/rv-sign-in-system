@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="MemberSignInSystem.ModernUI.Content.MemberDisplay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vms="clr-namespace:MemberSignInSystem.ModernUI.ViewModels"
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:content="clr-namespace:MemberSignInSystem.ModernUI.Content"
+             xmlns:this="clr-namespace:MemberSignInSystem.ModernUI.Content"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <BitmapImage x:Key="IndividualDefaultImage" UriSource="/MemberSignInSystem.ModernUI;component/Images/Original.jpg" />
+            <DataTemplate x:Key="IndividualTemplate">
+                <Button Margin="7" Command="{Binding DisplayInformation}" CommandParameter="{Binding}" >
+                    <Button.Content>
+                        <StackPanel Orientation="Vertical" Background="Transparent" Margin="5" >
+                            <Image Stretch="Uniform" Height="160" Width="160" Source="{Binding PicturePath, TargetNullValue={StaticResource IndividualDefaultImage}}" />
+                            <TextBlock Text="{Binding Id}" Style="{StaticResource Heading2}" HorizontalAlignment="Center" />
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                                <TextBlock Text="{Binding FirstName}" Style="{StaticResource Heading2}" />
+                                <TextBlock Text=" " Style="{StaticResource Heading2}" />
+                                <TextBlock Text="{Binding LastName}" Style="{StaticResource Heading2}" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+            </DataTemplate>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid>
+        <content:FlipImageGrid x:Name="ImageGrid" ImageDirectory="{DynamicResource PicturesDirectory}" OneImageBool="{DynamicResource OneImageBool}" />
+        <Grid Visibility="{Binding MemberDisplayIsVisible}" >
+            <Grid DataContext="{Binding DisplayedMember}">
+                <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Fill="{Binding ColorCode}" Opacity="0.7" />
+                <StackPanel Orientation="Vertical" Width="Auto">
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="{Binding Id}" Foreground="White" Style="{StaticResource Heading1}" FontWeight="Bold" />
+                        <TextBlock Text=": The " Foreground="White" Style="{StaticResource Heading1}" FontWeight="Bold" />
+                        <TextBlock Text="{Binding FamilyName}" Foreground="White" Style="{StaticResource Heading1}" FontWeight="Bold" />
+                        <TextBlock Text=" family" Foreground="White" Style="{StaticResource Heading1}" FontWeight="Bold" />
+                    </WrapPanel>
+                    <!--
+                    <ItemsControl ItemTemplate="{StaticResource IndividualTemplate}" ItemsSource="{Binding Individuals}" >
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                    -->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="7" Grid.Column="1" Command="{Binding DisplayInformation}" CommandParameter="{Binding}" >
+                            <Button.Content>
+                                <Image Stretch="Uniform" Source="{Binding PicturePath, TargetNullValue={StaticResource IndividualDefaultImage}}" />
+                            </Button.Content>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

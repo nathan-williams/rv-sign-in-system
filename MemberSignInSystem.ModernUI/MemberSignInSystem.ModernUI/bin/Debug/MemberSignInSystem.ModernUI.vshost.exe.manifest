@@ -62,43 +62,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Zof2LsXIdO3E3o1MFiD7f6V9u6IcFzGmyWfe363BWaQ=</dsig:DigestValue>
+        <dsig:DigestValue>mM4jtBh1jIcmxdpcReiNBBYdUL5O4pmk7jnBWL+PnoM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HgCo.WindowsLive.SkyDriveWebClient.dll" size="92672">
-      <assemblyIdentity name="HgCo.WindowsLive.SkyDriveWebClient" version="0.8.10.1498" publicKeyToken="956852A28DCD1E2B" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JNKEOZ8yxlxjYkuAypTcsUNgbzYsoXaiX9rZ3tXG8rg=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HtmlAgilityPack.dll" size="80384">
-      <assemblyIdentity name="HtmlAgilityPack" version="1.3.0.0" publicKeyToken="BD319B19EAF3B43A" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Dd/5E5pOAHaM4uDGwRMoUsNGsOZI7srHcxhKUK+iIpY=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MemberSignInSystem.ModernUI.exe" size="1120256">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MemberSignInSystem.ModernUI.exe" size="1116096">
       <assemblyIdentity name="MemberSignInSystem.ModernUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JlfXuMoD9f4h7mJiwWWfNKhKvD9dyl40qo9tRBpoqs8=</dsig:DigestValue>
+        <dsig:DigestValue>3Rbtg5lQkzBDnqgqVHl9j3yKGFphFV2SDHF+u1Sd+GA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -146,7 +122,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sYxmPO08lONNHvJNf/NpD5jTvG+qhaoPZ6NXbkJutmA=</dsig:DigestValue>
+        <dsig:DigestValue>0y594H3hzvLuAIH8ivQVR0AUaCycchXWNxnG9iAivt0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -278,7 +254,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qMj6Zr0lDnnW/D90eoLrOpabJva6YLmNDJ7LdKHrj/Q=</dsig:DigestValue>
+        <dsig:DigestValue>jq86ttvnia96dRF79dqhxOibh/zYxMpt94rxuo1+LQs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
