@@ -189,7 +189,11 @@ namespace MemberSignInSystem.ModernUI.ViewModels.Helpers
             {
                 string ext = Path.GetExtension(dbPath);
                 if (ext == ".accdb" || ext == ".mdb")
+                {
+                    if (conn.State == ConnectionState.Open)
+                        conn.Close();
                     conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + dbPath + ";";
+                }
                 else
                     throw new Exception("Database file extension invalid. Be sure you're trying to use a .accdb or .mdb file.");
                 

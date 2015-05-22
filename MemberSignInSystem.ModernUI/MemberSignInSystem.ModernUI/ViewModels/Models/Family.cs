@@ -26,6 +26,7 @@ namespace MemberSignInSystem.ModernUI.ViewModels.Models
         public Int32 AccType { get; set; } // 2 - Bond ; 3 - Associate
         public Int32 Flags { get; set; } // 0 - Regular ; 2 - board member ; 4 - inactive ; 8 - referral credits ; 16 - balance due w/ $25 late fee
         public DateTime RenewedDate { get; set; }
+        public DateTime ExpiresDate { get; set; }
         public String FamilyName { get; set; }
         public String Name { get; set; }
         public String Address { get; set; }
@@ -77,8 +78,9 @@ namespace MemberSignInSystem.ModernUI.ViewModels.Models
                 String[] sponsorMessages = { }; //{ "Stop by Glory Days today for lunch!", "Have you tried Ledo's yet?", "Hungry for some pizza? Why not Vochelli's?" };
                 int n = random.Next(greetings.Length + sponsorMessages.Length);
 
-                if (Flags == 0) return (greetings.Concat(sponsorMessages)).ToArray()[n];
-                else if (Flags == 2) return "Welcome";
+                if (ExpiresDate < DateTime.Now) return "Account expired";
+                else if (Flags == 0) return (greetings.Concat(sponsorMessages)).ToArray()[n];
+                if (Flags == 2) return "Welcome";
                 else if (Flags == 4) return "Account expired";
                 else if (Flags == 8) return (greetings.Concat(sponsorMessages)).ToArray()[n];
                 else if (Flags == 16) return "Account balance due with 25 dollar late fee.";
@@ -109,13 +111,13 @@ namespace MemberSignInSystem.ModernUI.ViewModels.Models
         {
             get
             {
-                if (Flags == 0) return Brushes.Green;
-                else if (Flags == 2) return Brushes.Blue;
+                if (ExpiresDate < DateTime.Now) return Brushes.Red;
+                else if (Flags == 0) return Brushes.Green;
+                if (Flags == 2) return Brushes.Blue;
                 else if (Flags == 4) return Brushes.Red;
                 else if (Flags == 8) return Brushes.LightGreen;
                 else if (Flags == 16) return Brushes.Yellow;
-                else if (RenewedDate.Year < DateTime.Now.Year) return Brushes.Red;
-                else return Brushes.Green;
+                return Brushes.Green;
 
                 /*
                 // Membership lasts two years from renewal date.
@@ -149,6 +151,7 @@ namespace MemberSignInSystem.ModernUI.ViewModels.Models
             this.AccType = 0;
             this.Flags = 0;
             this.RenewedDate = DateTime.MinValue;
+            this.ExpiresDate = DateTime.MinValue;
             this.FamilyName = "";
             this.Name = "";
             this.Address = "";
@@ -157,12 +160,12 @@ namespace MemberSignInSystem.ModernUI.ViewModels.Models
             this.Email = "";
             this.PicturePath = null;
             //this.Individuals = new List<Individual>();
-        }
+        }/*
         public Family(Int32 memberID, Int32 type, Int32 flags, DateTime renew, Boolean parent, String famname, String name, String address, String hNum, String cNum, String email)
         {
             this.Id = memberID;
             this.AccType = type;
-            this.Flags = flags;
+            this.ExpiresDate = flags;
             this.RenewedDate = renew;
             this.FamilyName = famname;
             this.Name = name;
@@ -172,7 +175,7 @@ namespace MemberSignInSystem.ModernUI.ViewModels.Models
             this.Email = email;
             this.PicturePath = FindPicture(this.Id);
             //this.Individuals = GetIndividuals(this.Id);
-        }
+        }*/
 
         public Family(DataRow row)
         {
@@ -180,6 +183,7 @@ namespace MemberSignInSystem.ModernUI.ViewModels.Models
             this.AccType = row["type"] is DBNull ? 0 : Convert.ToInt32(row["type"]);
             this.Flags = row["flags"] is DBNull ? 0 : Convert.ToInt32(row["flags"]);
             this.RenewedDate = row["renewed"] is DBNull ? DateTime.MinValue : Convert.ToDateTime(row["renewed"]);
+            this.ExpiresDate = row["expires"] is DBNull ? DateTime.MinValue : Convert.ToDateTime(row["expires"]);
             this.FamilyName = row["surname"] is DBNull ? "" : row["surname"] as String;
             this.Name = row["name"] is DBNull ? "" : row["name"] as String;
             this.Address = row["m_addr1"] is DBNull ? "" : row["m_addr1"] as String;
