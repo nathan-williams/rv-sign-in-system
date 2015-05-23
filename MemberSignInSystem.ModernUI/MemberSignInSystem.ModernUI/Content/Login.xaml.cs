@@ -46,7 +46,7 @@ namespace MemberSignInSystem.ModernUI.Content
             InitializeComponent();
 
             // Save reference to SearchMemberTextBox for scanner functionality
-            Application.Current.Resources["TextBoxDefaultStateCommand"] = new RelayCommand((o) => textboxSetDefaultState());
+            Application.Current.Resources["TextBoxDefaultStateCommand"] = new RelayCommand((o) => this.Dispatcher.BeginInvoke(new Action(textboxSetDefaultState)));
             Application.Current.Resources["SearchMemberTextBox"] = SearchMemberTextBox;
             Application.Current.Resources["SubitCommand"] = new RelayCommand((o) => submit(o as String));
 

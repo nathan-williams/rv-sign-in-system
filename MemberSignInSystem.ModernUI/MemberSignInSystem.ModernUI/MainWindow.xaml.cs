@@ -72,6 +72,7 @@ namespace MemberSignInSystem.ModernUI
             {
                 if (listen)
                 {
+                    ((RelayCommand)Application.Current.Resources["TextBoxDefaultStateCommand"]).Execute(null);
                     (Application.Current.Resources["SubitCommand"] as RelayCommand).Execute(query);
                 }
 

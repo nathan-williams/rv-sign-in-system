@@ -9,11 +9,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using FirstFloor.ModernUI.Presentation;
-using FirstFloor.ModernUI.Windows;
-using FirstFloor.ModernUI.Windows.Controls;
-using FirstFloor.ModernUI.Windows.Converters;
-using FirstFloor.ModernUI.Windows.Navigation;
 using MemberSignInSystem.ModernUI.Content;
 using System;
 using System.Diagnostics;
