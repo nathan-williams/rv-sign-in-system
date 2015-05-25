@@ -183,7 +183,7 @@ namespace MemberSignInSystem.ModernUI.Content
 
                 viewModel.Login(selectedMember);
                 viewModel.ForceUpdateHistoryReportTextCommand.Execute(null);
-
+                /*
                 // show installed voices
                 foreach (var v in speaker.GetInstalledVoices().Select(v => v.VoiceInfo))
                 {
@@ -191,7 +191,7 @@ namespace MemberSignInSystem.ModernUI.Content
                       v.Description, v.Gender, v.Age);
                 }
 
-                speaker.SpeakAsync(selectedMember.Greeting);
+                speaker.SpeakAsync(selectedMember.Greeting);*/
 
                 return 1;
             }

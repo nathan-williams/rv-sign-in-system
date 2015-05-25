@@ -64,7 +64,7 @@ namespace MemberSignInSystem.ModernUI.Content
 
         public static void LoadAnnouncements()
         {
-            string directoryUri = String.Format("{0}{1}", AppDomain.CurrentDomain.BaseDirectory, "Membership Records\\");
+            string directoryUri = Application.Current.Resources["RootFolder"] + "\\";
             string announcementsPath = directoryUri + "Announcements.txt";
             if (File.Exists(announcementsPath))
             {
